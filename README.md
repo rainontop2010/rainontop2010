@@ -1,76 +1,29 @@
-Config = Config or {
-
-    ["Main"] = {
-
-       
-
-    },
-
-    ["Process"] = {
-
-        ["Force Staying In Second Sea Until Have Dark Fragments"] = true,
-
-        ["Soul Guitar Quest"] = true,
-
-        ["Cursed Dual Katana Quest"] = true,
-
-        ["Auto Fully Mirror Fragtal"] = true,
-
-        ["Purchase Hidden Sword"] = true,
-
-        ["Purchase Legend Haki Color"] = true,
-
-        ["Max Fragments To Raid"] = {2000, 7500}, -- just effect if player level isnt max / first arg: sea 2, sec arg: sea 3
-
-        ["Fruit Hop"] =
-
-        {
-
-            ["Enable"] = true,
-
-            ["Delay Per Server"] = 60
-
-        }
-
-    },
-
-    ["Demon Fruit"] = {
-
-        ["Sniping Fruit"] = {
-
-            'Dough-Dough'
-
-        }, --Fruit to snipe when it on stock
-
-        ["Only Eat Awakenable Fruit"] = true,
-
-        ["Lock Fruit"] = {"Kitsune-Kitsune"}
-
-    },
-
-    ["Farming"] = {
-
-        ["Type Of Farming When Done All Tasks"] = "Custom Script", -- Custom Script / Nearby Farm /
-
-        ["Custom Script"] = ""
-
-    },
-
-    ["Utilly"] = {
-
-        ["White Screen"] = false,
-
-        ["Auto Add Friends / Accept Requests"] = false,
-
-        ["Anti Flagging"] = true,
-
-        ["Auto Hop If There Are Nearby Player When Level Farming"] = true,
-
-        ["Enable Ui"] = true
-
-    }
-
+-- Max level, godhuman, cdk, sgt
+script_key = "" -- premium only, u can leave it blank if ur not
+getgenv().Shutdown = false -- Turn on if u are farming bulk accounts
+getgenv().Configs = {
+    ["Team"] = "Marines",
+    ["Gun Farm"] = false,
+    ["FPS Boost"] = {
+        ["Enable"] = false,
+        ["FPS Cap"] = 30,
+    },
+    ["Farm Boss Drops"] = {
+        ["Enable"] = false,
+        ["When x2 Exp Expired"] = false
+    },
+    ["Auto Evo Race"] = true,
+    ["Awaken Fruit"] = true,
+    ["Rainbow Haki"] = true,
+    ["Hop Player Near"] = true,
+    ["Skull Guitar"] = true,
+    ["Find Fruit"] = false, -- Will find 1m+ fruit to unlock swan door to access third sea
+    ["Cursed Dual Katana"] = true,
+    ["Switch Melee"] = true,
+    ["Eat Fruit"] = "", -- leave blank for none, put the fruit name like this example: Smoke Fruit, T-Rex Fruit, ...
+    ["Snipe Fruit"] = "", -- leave blank for none, put the fruit name like this example: Smoke Fruit, T-Rex Fruit, ...
+    ["Lock Fragment"] = 0,
+    ["Buy Stuffs"] = true -- buso, geppo, soru, ken haki
 }
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/eltrul/toi-yeu-hentaivn/main/SwitchKaitun.lua"))()
+repeat task.wait() pcall(function() loadstring(game:HttpGet("https://raw.githubusercontent.com/Xero2409/XeroHub/refs/heads/main/kaitun.lua"))() end) until getgenv().Check_Execute
 
